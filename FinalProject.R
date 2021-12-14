@@ -10,8 +10,8 @@ sample = sample.split(data$corona_result, SplitRatio = .75) #split training and 
 train = subset(x, sample == TRUE)
 test  = subset(x, sample == FALSE)
 summary(test)  
-str(train)     #2500 objects
-str(test)      #7500 objects
+str(train)     #7500 objects
+str(test)      #2500 objects
 rf <- randomForest(                   #build and train the model with traning set 
   as.factor(corona_result) ~ .,
   data = train,
